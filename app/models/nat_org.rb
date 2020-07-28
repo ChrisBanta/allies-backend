@@ -1,0 +1,2 @@
+class NatOrg < ApplicationRecord
+end
