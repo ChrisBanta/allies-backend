@@ -1,13 +1,13 @@
-class NatOrgsController < ApplicationController
+class LocalorgsController < ApplicationController
 
     def index
-        @natorgs = NatOrg.all 
+        @localorgs = Localorg.all 
 
-        render json: @natorgs
+        render json: @localorgs
     end
 
     def create
-        @natorg = NatOrg.create(
+        @localorg = Localorg.create(
             name: params[:name],
             address: params[:address],
             phone: params[:phone],
@@ -15,17 +15,15 @@ class NatOrgsController < ApplicationController
             mission: params[:mission]
         )
 
-        # render json: @natorg, status: :created
+        # render json: @localorg, status: :created
 
     end
 
     def destroy
-        @natorg = NatOrg.find(params[:id])
+        @localorg = Localorg.find(params[:id])
 
-        @natorg.destroy
+        @localorg.destroy
 
         render status: :no_content
     end
-
-    
 end

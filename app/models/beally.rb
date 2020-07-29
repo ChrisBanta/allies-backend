@@ -1,0 +1,2 @@
+class Beally < ApplicationRecord
+end
